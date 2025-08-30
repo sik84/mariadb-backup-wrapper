@@ -1,0 +1,14 @@
+# Ignoriere generierte Backups
+mariadb_backups/
+*.sql
+
+# macOS
+.DS_Store
+
+# Linux/WSL
+*~
+
+# Editor-Dateien
+.vscode/
+.idea/
+*.swp
