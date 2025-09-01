@@ -3,14 +3,11 @@
 Dieses Projekt dient dazu, das Erstellen von Backups zu automatisieren und durch eine Abfrage zu verifizieren.
 
 ## 🚀 Features
+- Startet die MariaDB-Shell wie gewohnt  
+- Fragt beim Beenden nach einem Backup  
+- Erstellt vollständige Dumps aller Datenbanken mit Zeitstempel  
+- Legt die Backups automatisch im Home-Verzeichnis (`~/mariadb_backups/`) ab  
 
-Startet die MariaDB-Shell wie gewohnt
-
-Fragt beim Beenden nach einem Backup
-
-Erstellt vollständige Dumps aller Datenbanken mit Zeitstempel
-
-Legt die Backups automatisch im Home-Verzeichnis (~/mariadb_backups/) ab
 
 ## 📦 Installation
 
@@ -31,13 +28,13 @@ chmod +x mysql-wrapper.sh
 
 Du hast zwei Möglichkeiten:
 
-## Variante A: Direkt im Projektordner nutzen
+### Variante A: Direkt im Projektordner nutzen
 
 ```bash
 ./mysql-wrapper.sh -u root -p
 ```
 
-## Variante B: Alias setzen (empfohlen)
+### Variante B: Alias setzen (empfohlen)
 Wenn du immer mysql statt mysql-wrapper.sh tippen willst, kannst du einen Alias in deine ~/.bashrc oder ~/.zshrc einfügen:
 
 ```bash
@@ -54,7 +51,7 @@ Nun reicht:
 mysql -u root -p
 ```
 
-## 💾 Backups
+### 💾 Backups
 
 Backups werden im Ordner ~/mariadb_backups/ gespeichert
 
@@ -62,7 +59,7 @@ Dateiname: all_databases_YYYYMMDD_HHMMSS.sql
 
 Falls der Ordner nicht existiert, wird er automatisch angelegt
 
-## 📸 Beispielablauf
+### 📸 Beispielablauf
 
 ```bash
 $ ./mysql-wrapper.sh -u root -p
@@ -74,7 +71,7 @@ Erstelle Backup in /home/user/mariadb_backups/all_databases_20250830_142500.sql 
 ✅ Backup erfolgreich!
 ```
 
-## 📝 Lizenz
+### 📝 Lizenz
 
 Copyright © 2025 Stefan Sikiric
 
